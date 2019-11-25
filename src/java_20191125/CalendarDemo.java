@@ -7,10 +7,31 @@ public class CalendarDemo {
 	private int totalCount;
 	int[] monthArray = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };;
 
+	public CalendarDemo(int y) {
+		// year = y;
+		this(y, 0, 0);
+	}
+
+	public CalendarDemo(int y, int m) {
+		// year = y;
+		// month = m;
+		this(y, m, 0);
+	}
+
+	// 다른 생성자가 한개라도 없으면 콤파일러 가 자동적으로 생성해줌
+	// 매개변수 3개 짜리 생성자 (클래스 이름과 동일하며 반환값(void)이 없음)
+	public CalendarDemo(int year, int month, int day) {
+		this.year = year;
+		this.month = month;
+		this.day = day;
+		getTotalCount();
+	}
+
 	public void set(int y, int m, int d) {
 		year = y;
 		month = m;
 		day = d;
+		getTotalCount();
 	}
 
 	public int getTotalCount() {
@@ -18,9 +39,7 @@ public class CalendarDemo {
 		int Premonth = month - 1;
 		// int totalCount = 0;
 
-		int sum = 0;
 		for (int i = 0; i < monthArray.length - 13 + month; i++) {
-			sum += monthArray[i];
 		}
 
 		// 2018년까지 총일 수 구하기
@@ -65,11 +84,27 @@ public class CalendarDemo {
 
 	}
 
-	public static void main(String[] args) {
-		CalendarDemo c = new CalendarDemo();
-		c.set(2019, 12, 25);
-		c.getTotalCount();
-		c.print();
-	}
+	/*
+	 * public CalendarDemo(){
+	 * 
+	 * }
+	 */
 
+	public static void main(String[] args) {
+		CalendarDemo c = new CalendarDemo(2019, 12, 25);
+		// c.set(2019, 12, 25);
+		// c.getTotalCount();
+		c.print();
+		// year, month, day
+		int total = 0;
+		for (int i = 1; i <= 100; i++) {
+			if (i % 2 != 0) {
+				total += i;
+			}
+			System.out.print(total);
+		}
+
+	}
 }
+
+// 추상클래스의 다형성 인터페이스의 다형성 내일 가장중요
