@@ -6,8 +6,8 @@ public class Homework2 {
 		// 1.input "abcd" => "dcba"
 		// 2.input "abcde" => "edcba"
 
-		String input = "abcd"; // "abcde"
-		char[] ch = input.toCharArray();
+		String a = "abcd"; // "abcde"
+		char[] ch = a.toCharArray();
 
 		for (int i = 0; i < ch.length / 2; i++) {
 			char temp = ch[i];

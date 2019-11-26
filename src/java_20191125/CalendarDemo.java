@@ -7,11 +7,15 @@ public class CalendarDemo {
 	private int totalCount;
 	int[] monthArray = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };;
 
+	
 	public CalendarDemo(int y) {
 		// year = y;
 		this(y, 0, 0);
+		 System.out.println(year);
+
 	}
 
+	
 	public CalendarDemo(int y, int m) {
 		// year = y;
 		// month = m;
