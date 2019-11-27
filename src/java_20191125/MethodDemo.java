@@ -42,7 +42,7 @@ public class MethodDemo {
 
 		MethodDemo md = new MethodDemo();
 		
-		int temp1 = md.plus(10, 20); // 10,20  => 전달인자(Argument)
+		int temp1 = (int) md.plus(10, 20); // 10,20  => 전달인자(Argument)
 		
 		System.out.println(temp1);
 		

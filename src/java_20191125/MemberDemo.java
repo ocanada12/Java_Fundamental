@@ -23,7 +23,7 @@ public class MemberDemo {
 		System.out.println(m.getPassword());
 		System.out.println(m.getHeight());
 		
-		배우기는 하는데 개념만 알아도 된다.
-		아이오
+		//배우기는 하는데 개념만 알아도 된다.
+		//아이오
 	}
 }
