@@ -20,8 +20,8 @@ public class ArrayCopyDemo {
 		String[] ref = fruits;
 		ref[0] = "jobs";
 
-		System.out.print(fruits[0]);
-		System.out.print(ref[0]);
+		System.out.println(fruits[0]);
+		System.out.println(ref[0]);
 	
 		int[] a= {1,2,3,4};
 		int[] b= {1,2,3,4};
