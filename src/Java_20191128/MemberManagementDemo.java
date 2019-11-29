@@ -12,7 +12,7 @@ public class MemberManagementDemo {
 
 	public void print() {
 		System.out.println("********************************************");
-		System.out.println("*1)insert 2)update 3)delete 4)search 5)exit*");
+		System.out.println("*1)insert 2)update 3)delete 4)search 5)exit**");
 		System.out.println("********************************************");
 	}
 
@@ -28,16 +28,16 @@ public class MemberManagementDemo {
 		} else if (index.equals("2")) {
 			update();
 		} else if (index.equals("3")) {
-			delete();
-		} else if (index.equals("4")) {
+			delete();   					                                                        
+		} else if (index.equals("4")) {                        
 			search();
-		} else if (index.equals("5")) {
-			System.out.println("프로그램 종료");
+		} else if (index.equals("5")) {                           
+			System.out.println("프로그램 종료");               
 		} else {
-			System.out.println("사요나라!!");
-		}
+			System.out.println("사요나라!!");                                                                                                                                                                                                                                                                                       
+		}                                                     
 	}
-
+                                                                                                                                                                                                                                                                                                                                                                                                   
 	// 1. 검색할 아이디를 입력받는다.
 	// 2. ArrayList에 있는 멤버중에서 검색할 아이디를 찾아서 있으면 출력하고
 	// 없으면 "검색할 아이디가 없습니다." 라는 메세지를 출력한다.
@@ -46,7 +46,35 @@ public class MemberManagementDemo {
 	// 5. 번호를 입력받으면 run()메서드를 호출한다.
 
 	public void search() {
+		String id = console("아이디>");
+		int count = list.size();
+		for (Member i : list) {
+			count -= 1;
+			if (i.getId().equals(id)) {
+				System.out.println(i);
+				break;
+			} else if (count == 0) {
+				System.out.println("검색한 결과가 없습니다.");
+			}
+		}
+		choice();
+	}
 
+	
+	
+	
+	public void show() {
+		System.out.println("<all member>");
+		for (Member i : list) {
+			System.out.println(i);
+		}
+		choice();
+	}
+
+	public void choice() {
+		print();
+		String index = console("번호를 선택하세요 >");
+		run(index);
 	}
 
 	// 1. 삭제할 아이디를 입력받는다.
@@ -58,7 +86,21 @@ public class MemberManagementDemo {
 	// 6. 번호를 입력받으면 run()메서드를 호출한다.
 
 	public void delete() {
-
+		String id = console("아이디>");
+		int count = list.size();
+		for (Member i : list) {
+			count -= 1;
+			if (i.getId().equals(id)) {
+				System.out.println("<delete member>");
+				System.out.println(i);
+				list.remove(i);
+				show();
+				break;
+			} else if (count == 0) {
+				System.out.println("삭제할 아이디가 없습니다.");
+				choice();
+			}
+		}
 	}
 
 	// 1. 수정할 아이디를 입력받는다.
@@ -71,7 +113,21 @@ public class MemberManagementDemo {
 	// 6. 번호를 입력받으면 run()메서드를 호출한다.
 
 	public void update() {
-
+		String id = console("아이디>");
+		int count = list.size();
+		for (Member i : list) {
+			count -= 1;
+			if (i.getId().equals(id)) {
+				i.setName(console("새로운 이름>"));
+				System.out.println("<update member>");
+				System.out.println(i);
+				show();
+				break;
+			} else if (count == 0) {
+				System.out.println("수정할 아이디가 없습니다.");
+				choice();
+			}
+		}
 	}
 
 	// 1. 아이디를 입력받는다.
@@ -93,13 +149,12 @@ public class MemberManagementDemo {
 		print();
 		String index = console("번호를 선택하세요>");
 		run(index);
-	}
+	}				
 
 	public static void main(String[] args) {
 		MemberManagementDemo m1 = new MemberManagementDemo();
-		m1.print();
+		m1.print();					
 		String index = m1.console("번호를 선택하세요>");
 		m1.run(index);
-
 	}
 }
