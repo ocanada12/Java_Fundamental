@@ -1,5 +1,7 @@
 package java_20191120;
 
+// parseint => 문자형을 정수로 바꿔줌
+ 
 public class SwitchDemo {
 	public static void main(String[] args) {
 		int month = Integer.parseInt(args[0]);

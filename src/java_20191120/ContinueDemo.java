@@ -4,8 +4,11 @@ public class ContinueDemo {
 	public static void main(String[] args) {
 		int sum = 0;
 		for (int i = 0; i < 10; i++) {
-			if (i == 6)
+			if (i == 4) {
 				continue;
+
+			}
+			System.out.println(i);
 			sum += i;
 		}
 		System.out.println(sum);
@@ -16,7 +19,7 @@ public class ContinueDemo {
 					continue;
 				System.out.printf("%d*%d=%d%n", i, j, i * j);
 			}
-			
-	}
+
+		}
 	}
 }

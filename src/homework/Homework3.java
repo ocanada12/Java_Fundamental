@@ -62,7 +62,7 @@ public class Homework3 {
 		Scanner sc = new Scanner(System.in);
 		return sc.next();
 	}
-			
+
 	// 날짜구하고
 	// 날짜 불러오고
 	// 달력형태
@@ -83,7 +83,7 @@ public class Homework3 {
 		c.console("(연,월,일) 입력하세요 => ");
 
 		for (int z = 1; z <= 12; z++) {
-			
+
 			int month = z;
 
 			System.out.printf("%n%n*** %d월 달력 ***%n%n일\t월\t화\t수\t목\t금\t토%n%n", month);
@@ -118,4 +118,6 @@ public class Homework3 {
 }
 
 // 회원관리 프로그램 ArrayList
-																															
+// 코딩을
+// 2019년 3월 1일 -> 수요일 
+// 일월화수목금토 수요일
