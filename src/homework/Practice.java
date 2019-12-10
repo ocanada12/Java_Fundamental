@@ -9,7 +9,6 @@ public class Practice {
 		
 		while(true){
 			System.out.println("하고싶은 달을 입력하세요");
-			temp = sc.
 		}
 
 	}

@@ -1,7 +1,7 @@
 package java_20191125;
 
 public class VarArgDemo {
-	public void m(int... test) {
+	public void m(int ... test) { // ...은 가변인수
 		int length = test.length;
 		if (length == 1) {
 			System.out.printf("인자가 1개입니다.%d %n", test[0]);

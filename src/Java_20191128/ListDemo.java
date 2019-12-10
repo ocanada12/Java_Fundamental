@@ -47,3 +47,4 @@ class Product {
 		return "Product [number=" + number + ", name=" + name + ", price=" + price + "]";
 	}
 }
+
